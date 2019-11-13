@@ -1,0 +1,62 @@
+{
+	"Geschlechter": [
+		"männlich",
+		"weiblich"
+	],
+	"Kunden": [{
+		"Kundennummer": "1000001",
+		"Vorname": "Max",
+		"Nachname": "Mustermann",
+		"Titel": "Dr.",
+		"Geschlecht": "männlich",
+		"EMail": "max.musterman@mail.com",
+		"Telefon": "0611/11 11 111",
+		"Website": "www.max-mustermann.com"
+	}, {
+		"Kundennummer": "1000002",
+		"Vorname": "Hans",
+		"Nachname": "Huber",
+		"Titel": "",
+		"Geschlecht": "männlich",
+		"EMail": "HaHu@mail.at",
+		"Telefon": "0622/22 22 222",
+		"Website": ""
+	}, {
+		"Kundennummer": "1000003",
+		"Vorname": "Gabi",
+		"Nachname": "Gruber",
+		"Titel": "MSc",
+		"Geschlecht": "weiblich",
+		"EMail": "gabi.gruber@mail.com",
+		"Telefon": "0633/33 33 333",
+		"Website": "www.gabgruber.at"
+	}, {
+		"Kundennummer": "1000004",
+		"Vorname": "Franz",
+		"Nachname": "Franzmann",
+		"Titel": "Ing.",
+		"Geschlecht": "männlich",
+		"EMail": "ing.franzmann@mail.com",
+		"Telefon": "0644/44 44 444",
+		"Website": "www.ing-franzmann.at"
+	}, {
+		"Kundennummer": "1000005",
+		"Vorname": "Lena",
+		"Nachname": "Lauch",
+		"Titel": "Dr.",
+		"Geschlecht": "weiblich",
+		"EMail": "lauchlena@mail.com",
+		"Telefon": "0655/55 55 555",
+		"Website": ""
+	}, {
+		"Kundennummer": "1000006",
+		"Vorname": "Herbert",
+		"Nachname": "Hartmann",
+		"Titel": "",
+		"Geschlecht": "männlich",
+		"EMail": "herberthartmann@mail.com",
+		"Telefon": "0666/66 66 666",
+		"Website": "www.herbihart.com"
+	}]
+
+}

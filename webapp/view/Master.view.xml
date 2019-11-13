@@ -1,0 +1,49 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:fb="sap.ui.comp.filterbar"
+	controllerName="at.clouddna.training.FioriDeepDive.controller.Master" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="{i18n>master.title}">
+		<headerContent>
+			<core:Icon id="master_icon_language" src="sap-icon://globe"/>
+			<Select id="master_select_language" selectedKey="{languageModel>/currentLanguage}">
+				<core:Item key="de" text="Deutsch"/>
+				<core:Item key="en" text="English"/>
+			</Select>
+		</headerContent>
+		<content>
+			<smartFilterBar:SmartFilterBar id="master_smartfilterbar" entitySet="CustomerSet" search="onSearch"></smartFilterBar:SmartFilterBar>
+			<smartTable:SmartTable id="master_smarttable" entitySet="CustomerSet" tableType="ResponsiveTable" useExportToExcel="true"
+				useVariantManagement="false" useTablePersonalisation="true" header="{i18n>master.table.title.plurals}" showRowCount="true"
+				enableAutoBinding="true" class="sapUiResponsiveContentPadding" smartFilterId="master_smartfilterbar">
+				<smartTable:customToolbar>
+					<OverflowToolbar design="Transparent">
+						<ToolbarSpacer/>
+						<Button id="master_button_scanqrcode" text="{i18n>button.qrcode}" press="onScanQRCodePress"/>
+						<Button id="master_button_add" text="{i18n>button.add}" press="onNewCustomerPress"/>
+					</OverflowToolbar>
+				</smartTable:customToolbar>
+				<Table>
+					<columns>
+						<Column id="master_column_delete" width="100px" hAlign="Left">
+							<customData>
+								<core:CustomData key="p13nData" value='\{"columnKey": "master_column_delete","columnIndex":"99"}'/>
+							</customData>
+							<Text text="{i18n>app.delete}"/>
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem type="Navigation" press="onCustomerPress">
+							<cells>
+								<Button press="onDeleteCustomerPress" icon="sap-icon://delete"/>
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</smartTable:SmartTable>
+		</content>
+		<footer>
+			<Toolbar id="master_footer">
+				<Button id="master_footer_messagepopover" icon="sap-icon://message-popup" type="Emphasized" press="handleMessagePopoverPress"/>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>
